@@ -32,7 +32,7 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            python daily_analysis.py --force-run
+            python main.py --force-run
           else
-            python daily_analysis.py
+            python main.py
           fi
